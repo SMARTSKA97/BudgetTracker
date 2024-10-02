@@ -1,0 +1,15 @@
+<!-- src/app/app.component.html -->
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+
+<div class="p-m-4">
+  <p-toolbar>
+    <div class="p-toolbar-group-left">
+      <span class="p-toolbar-separator p-mr-2"></span>
+      <a pButton type="button" label="Expenses" icon="pi pi-list" class="p-mr-2" routerLink="/expenses"></a>
+      <a pButton type="button" label="Add Expense" icon="pi pi-plus" class="p-mr-2" routerLink="/add-expense"></a>
+      <a pButton type="button" label="Summary" icon="pi pi-chart-line" routerLink="/summary"></a>
+    </div>
+  </p-toolbar>
+  <router-outlet></router-outlet>
+</div>

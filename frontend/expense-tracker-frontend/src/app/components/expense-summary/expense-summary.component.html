@@ -1,0 +1,41 @@
+<!-- src/app/components/expense-summary/expense-summary.component.html -->
+<p-toast></p-toast>
+
+<div class="p-m-4">
+  <h2>Expense Summary</h2>
+  <div class="p-grid p-dir-col">
+    <div class="p-col">
+      <div class="p-card">
+        <div class="p-card-body">
+          <h3>Total Expenses</h3>
+          <h2>{{totalExpenses | currency}}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-col p-mt-4">
+      <div class="p-card">
+        <div class="p-card-body">
+          <h3>Expenses by Month</h3>
+          <div class="p-field p-grid">
+            <label for="month" class="p-col-fixed" style="width:100px">Select Month:</label>
+            <div class="p-col">
+              <p-dropdown 
+                id="month" 
+                [options]="months" 
+                [(ngModel)]="selectedMonth" 
+                placeholder="Select a Month" 
+                (onChange)="onMonthChange()">
+              </p-dropdown>
+            </div>
+          </div>
+          <h2>{{totalByMonth | currency}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="errorMessage" class="p-error p-mt-3">
+    {{errorMessage}}
+  </div>
+</div>

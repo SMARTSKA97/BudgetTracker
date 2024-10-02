@@ -1,0 +1,19 @@
+/* src/styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .p-toolbar {
+    margin-bottom: 20px;
+  }
+  
+  .p-card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  

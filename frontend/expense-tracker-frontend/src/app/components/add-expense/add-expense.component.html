@@ -1,0 +1,32 @@
+<!-- src/app/components/add-expense/add-expense.component.html -->
+<p-toast></p-toast>
+
+<div class="p-m-4">
+  <h2>Add New Expense</h2>
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="description">Description</label>
+      <input id="description" type="text" pInputText [(ngModel)]="expense.description" name="description" required />
+    </div>
+
+    <div class="p-field">
+      <label for="amount">Amount</label>
+      <p-inputNumber id="amount" [(ngModel)]="expense.amount" name="amount" [mode]="'currency'" currency="INR" locale="en-US"></p-inputNumber>
+    </div>
+
+    <div class="p-field">
+      <label for="category">Category</label>
+      <p-dropdown 
+        id="category" 
+        [options]="categories" 
+        [(ngModel)]="expense.category" 
+        placeholder="Select a Category" 
+        name="category">
+      </p-dropdown>
+    </div>
+
+    <div class="p-field">
+      <button pButton type="button" label="Add Expense" icon="pi pi-plus" (click)="addExpense()"></button>
+    </div>
+  </div>
+</div>
